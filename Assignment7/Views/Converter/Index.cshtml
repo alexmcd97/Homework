@@ -1,0 +1,62 @@
+@model ConverterViewModel
+
+<h3>Welcome to Unit Converter!</h3>
+
+<p>With this you can:</p>
+<ul>
+<li>Convert Temperatures between Celsius, Fahrenheit, and Kelvin</li>
+<li>Convert Length between Meters, Feet, and Yards</li>
+<li>Convert Mass between Ounces, Pounds, Grams, and Kilograms</li>
+</ul>
+
+<h3>Temperatures</h3>
+<form asp-controller="Converter" asp-action="DoTemperature" method="POST">
+    Value to Convert:<br>
+    <input type="text" asp-for="@Model.value"><br>
+    What are you Converting from, and to?<br>
+    <input type="radio" value="FahrenheittoCelsius" asp-for="@Model.Conversion"> Fahrenheit to Celsius<br>
+    <input type="radio" value="FahrenheittoKelvin" asp-for="@Model.Conversion"> Fahrenheit to Kelvin<br>
+    <input type="radio" value="CelsiustoFahrenheit" asp-for="@Model.Conversion"> Celsius to Fahrenheit<br>
+    <input type="radio" value="CelsiustoKelvin" asp-for="@Model.Conversion"> Celsius to Kelvin<br>
+    <input type="radio" value="KelvintoCelsius" asp-for="@Model.Conversion"> Kelvin to Celsius<br>
+    <input type="radio" value="KelvintoFahrenheit" asp-for="@Model.Conversion"> Kelvin to Fahrenheit<br>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form><br>
+<h3>Length</h3>
+<form asp-controller="Converter" asp-action="DoLength" method="POST">
+    Value to Convert:<br>
+    <input type="text" asp-for="@Model.value"><br>
+    What are you Converting from, and to?<br>
+    <input type="radio" value="FeettoMeters" asp-for="@Model.Conversion"> Feet to Meters<br>
+    <input type="radio" value="FeettoYards" asp-for="@Model.Conversion"> Feet to Yards<br>
+    <input type="radio" value="MeterstoFeet" asp-for="@Model.Conversion"> Meters to Feet<br>
+    <input type="radio" value="MeterstoYards" asp-for="@Model.Conversion"> Meters to Yards<br>
+    <input type="radio" value="YardstoFeet" asp-for="@Model.Conversion"> Yards to Feet<br>
+    <input type="radio" value="YardstoMeters" asp-for="@Model.Conversion"> Yards to Meters<br>
+
+    <br>
+    <input type="submit" value="Submit">
+</form><br>
+<h3>Mass</h3>
+<form asp-controller="Converter" asp-action="DoMass" method="POST">
+    Value to Convert:<br>
+    <input type="text" asp-for="@Model.value"><br>
+    What are you Converting from, and to?<br>
+    <input type="radio" value="OuncetoPound" asp-for="@Model.Conversion"> Oz to Pounds<br>
+    <input type="radio" value="OuncetoGram" asp-for="@Model.Conversion"> Oz to Grams<br>
+    <input type="radio" value="OuncetoKG" asp-for="@Model.Conversion"> Oz to KG<br>
+    <input type="radio" value="PoundtoOunce" asp-for="@Model.Conversion"> Pounds to Oz<br>
+    <input type="radio" value="PoundtoGram" asp-for="@Model.Conversion"> Pounds to Grams<br>
+    <input type="radio" value="PoundtoKG" asp-for="@Model.Conversion"> Pounds to KG<br>
+    <input type="radio" value="GramtoOunce" asp-for="@Model.Conversion"> Gram to Oz<br>
+    <input type="radio" value="GramtoPound" asp-for="@Model.Conversion"> Gram to Pounds<br>
+    <input type="radio" value="GramtoKG" asp-for="@Model.Conversion"> Gram to KG<br>
+    <input type="radio" value="KGtoOunce" asp-for="@Model.Conversion"> KG to Oz<br>
+    <input type="radio" value="KGtoPound" asp-for="@Model.Conversion"> Kg to Pounds<br>
+    <input type="radio" value="KGtoGram" asp-for="@Model.Conversion"> Kg to Grams<br>
+
+    <br>
+    <input type="submit" value="Submit">
+</form>
